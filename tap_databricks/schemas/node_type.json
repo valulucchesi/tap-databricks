@@ -15,7 +15,7 @@
     "num_cores":{
       "type":[
         "null",
-        "integer"
+        "number"
       ]
     },
     "description":{

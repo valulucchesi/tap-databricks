@@ -95,7 +95,7 @@ class DatabricksSync:
         stream = "node_type"
         loop = asyncio.get_event_loop()
 
-        singer.write_schema(stream, schema.to_dict(), ["id"])
+        singer.write_schema(stream, schema.to_dict(), ["node_type_id"])
         node_types = await loop.run_in_executor(None, self.client.node_type)
         extraction_time = singer.utils.now()
         if node_types:
